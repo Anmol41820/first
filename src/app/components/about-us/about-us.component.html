@@ -1,0 +1,33 @@
+<div class="col">
+    <div class="accordion" id="accordionExample" *ngFor="let a of arrAboutUs">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    {{a.aboutUsName}}
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;">
+                                <img [src]="a.img" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{a.aboutUsTitle}}</h5>
+                                    <p class="card-text">{{a.aboutUsText}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

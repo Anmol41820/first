@@ -1,0 +1,19 @@
+<!-- Home here -->
+<div class="row text-center">
+    <div class="col home-item" *ngFor="let a of arrHome">
+        <div class="card" style="width: 18rem;">
+            <img [src]="a.img" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{a.homeName}}</h5>
+                <p class="card-text">
+                    Id: {{a.id}}
+                    <br>
+                    About: {{a.homeContext}}
+                </p>
+                <!-- <button class="btn btn-primary" (click)="displayDetails(a.id,a.homeName)">Add to Cart</button> -->
+                <button class="btn btn-primary" (click)="displayDetails(a.id,a.homeName)">Go to Assessments</button>
+            </div>
+
+        </div>
+    </div>
+</div>

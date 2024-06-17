@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+    <h2>Add Category</h2>
+    <div class="mb-4">
+        <label for="catDescriptionInput" class="form-label">Category Description</label>
+        <input type="text" id="catDescriptionInput" class="form-control" name="catDescription"
+            formControlName="catDescription">
+        <div *ngIf="submitted && f['catDescription'].errors" class="">
+            <div *ngIf="f['catDescription'].errors['required']" style="color:red">Categoty Description is required</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Category</button>
+</form>

@@ -1,0 +1,303 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+        <button class="nav-link active" id="nav-users-tab" data-bs-toggle="tab" data-bs-target="#nav-users"
+            type="button" role="tab" aria-controls="nav-users" aria-selected="true">Users</button>
+
+        <button class="nav-link" id="nav-courses-tab" data-bs-toggle="tab" data-bs-target="#nav-courses" type="button"
+            role="tab" aria-controls="nav-courses" aria-selected="false">Courses</button>
+
+        <button class="nav-link" id="nav-coursecategories-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-coursecategories" type="button" role="tab" aria-controls="nav-coursecategories"
+            aria-selected="false">CourseCategories</button>
+
+        <button class="nav-link" id="nav-assessment-tab" data-bs-toggle="tab" data-bs-target="#nav-assessment"
+            type="button" role="tab" aria-controls="nav-assessment" aria-selected="false">Assessment</button>
+
+        <button class="nav-link" id="nav-assessmentscore-tab" data-bs-toggle="tab" data-bs-target="#nav-assessmentscore"
+            type="button" role="tab" aria-controls="nav-assessmentscore" aria-selected="false">AssessmentScore</button>
+
+        <button class="nav-link" id="nav-report-tab" data-bs-toggle="tab" data-bs-target="#nav-report" type="button"
+            role="tab" aria-controls="nav-report" aria-selected="false">Report</button>
+
+        <!-- <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button> -->
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <!-- Users -->
+
+    <div class="tab-pane fade show active" id="nav-users" role="tabpanel" aria-labelledby="nav-users-tab" tabindex="0">
+
+        <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="faculty-tab" data-bs-toggle="tab" data-bs-target="#faculty-tab-pane"
+                    type="button" role="tab" aria-controls="faculty-tab-pane" aria-selected="true">Faculty</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="trainee-tab" data-bs-toggle="tab" data-bs-target="#trainee-tab-pane"
+                    type="button" role="tab" aria-controls="trainee-tab-pane" aria-selected="false">Trainee</button>
+            </li>
+        </ul> -->
+        <!-- <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="faculty-tab-pane" role="tabpanel" aria-labelledby="faculty-tab"
+                tabindex="0"> -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="facultyviewUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#facultyviewUser-tab-pane" type="button" role="tab"
+                            aria-controls="facultyviewUser-tab-pane" aria-selected="true">View User</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="facultyaddUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#facultyaddUser-tab-pane" type="button" role="tab"
+                            aria-controls="facultyaddUser-tab-pane" aria-selected="false">Add User</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="facultyupdateUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#facultyupdateUser-tab-pane" type="button" role="tab"
+                            aria-controls="facultyupdateUser-tab-pane" aria-selected="false">Update User</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="facultyviewUser-tab-pane" role="tabpanel"
+                        aria-labelledby="facultyviewUser-tab" tabindex="0">
+
+                        <app-view-user></app-view-user>
+                    </div>
+                    <div class="tab-pane fade" id="facultyaddUser-tab-pane" role="tabpanel"
+                        aria-labelledby="facultyaddUser-tab" tabindex="0">
+                        <app-add-user></app-add-user>
+                    </div>
+                    <div class="tab-pane fade" id="facultyupdateUser-tab-pane" role="tabpanel"
+                        aria-labelledby="facultyupdateUser-tab" tabindex="0">
+                        Comming Soon...
+                    </div>
+                </div>
+
+            <!-- </div>
+            <div class="tab-pane fade" id="trainee-tab-pane" role="tabpanel" aria-labelledby="trainee-tab" tabindex="0">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="traineeviewUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#traineeviewUser-tab-pane" type="button" role="tab"
+                            aria-controls="traineeviewUser-tab-pane" aria-selected="true">View User</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="traineeaddUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#traineeaddUser-tab-pane" type="button" role="tab"
+                            aria-controls="traineeaddUser-tab-pane" aria-selected="false">Add User</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="traineeupdateUser-tab" data-bs-toggle="tab"
+                            data-bs-target="#traineeupdateUser-tab-pane" type="button" role="tab"
+                            aria-controls="traineeupdateUser-tab-pane" aria-selected="false">Update User</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="traineeviewUser-tab-pane" role="tabpanel"
+                        aria-labelledby="traineeviewUser-tab" tabindex="0">
+                        <table class="table caption-top">
+                            <caption>List of Trainee</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Ram</td>
+                                    <td><button type="button" class="btn btn-secondary">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Shyam</td>
+                                    <td><button type="button" class="btn btn-secondary">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="traineeaddUser-tab-pane" role="tabpanel"
+                        aria-labelledby="traineeaddUser-tab" tabindex="0">
+                        Comming Soon...
+                    </div>
+                    <div class="tab-pane fade" id="traineeupdateUser-tab-pane" role="tabpanel"
+                        aria-labelledby="traineeupdateUser-tab" tabindex="0">
+                        Comming Soon...
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-courses" role="tabpanel" aria-labelledby="nav-courses-tab" tabindex="0">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="viewCourse-tab" data-bs-toggle="tab"
+                    data-bs-target="#viewCourse-tab-pane" type="button" role="tab" aria-controls="viewCourse-tab-pane"
+                    aria-selected="true">View Courses</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addCourse-tab" data-bs-toggle="tab" data-bs-target="#addCourse-tab-pane"
+                    type="button" role="tab" aria-controls="addCourse-tab-pane" aria-selected="false">Add
+                    Courses</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="updateCourse-tab" data-bs-toggle="tab"
+                    data-bs-target="#updateCourse-tab-pane" type="button" role="tab"
+                    aria-controls="updateCourse-tab-pane" aria-selected="false">Update Courses</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="viewCourse-tab-pane" role="tabpanel"
+                aria-labelledby="viewCourse-tab" tabindex="0">
+
+                <app-view-course></app-view-course>
+            </div>
+            <div class="tab-pane fade" id="addCourse-tab-pane" role="tabpanel" aria-labelledby="addCourse-tab"
+                tabindex="0">
+                <app-add-course></app-add-course>
+            </div>
+            <div class="tab-pane fade" id="updateCourse-tab-pane" role="tabpanel" aria-labelledby="updateCourse-tab"
+                tabindex="0">
+                Comming Soon...
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-coursecategories" role="tabpanel" aria-labelledby="nav-coursecategories-tab"
+        tabindex="0">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="viewCategory-tab" data-bs-toggle="tab"
+                    data-bs-target="#viewCategory-tab-pane" type="button" role="tab"
+                    aria-controls="viewCategory-tab-pane" aria-selected="true">View Course Category</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addCategory-tab" data-bs-toggle="tab"
+                    data-bs-target="#addCategory-tab-pane" type="button" role="tab" aria-controls="addCategory-tab-pane"
+                    aria-selected="false">Add Course Category</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="updateCategory-tab" data-bs-toggle="tab"
+                    data-bs-target="#updateCategory-tab-pane" type="button" role="tab"
+                    aria-controls="updateCategory-tab-pane" aria-selected="false">Update Course Category</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="viewCategory-tab-pane" role="tabpanel"
+                aria-labelledby="viewCategory-tab" tabindex="0">
+
+                <app-view-category></app-view-category>
+            </div>
+            <div class="tab-pane fade" id="addCategory-tab-pane" role="tabpanel" aria-labelledby="addCategory-tab"
+                tabindex="0">
+                <app-add-category></app-add-category>
+            </div>
+            <div class="tab-pane fade" id="updateCategory-tab-pane" role="tabpanel" aria-labelledby="updateCategory-tab"
+                tabindex="0">
+                Comming Soon...
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-assessment" role="tabpanel" aria-labelledby="nav-assessment-tab" tabindex="0">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="viewAssessment-tab" data-bs-toggle="tab"
+                    data-bs-target="#viewAssessment-tab-pane" type="button" role="tab"
+                    aria-controls="viewAssessment-tab-pane" aria-selected="true">View Assessment</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addAssessment-tab" data-bs-toggle="tab"
+                    data-bs-target="#addAssessment-tab-pane" type="button" role="tab"
+                    aria-controls="addAssessment-tab-pane" aria-selected="false">Add Assessment</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="updateAssessment-tab" data-bs-toggle="tab"
+                    data-bs-target="#updateAssessment-tab-pane" type="button" role="tab"
+                    aria-controls="updateAssessment-tab-pane" aria-selected="false">Update Assessment</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="viewAssessment-tab-pane" role="tabpanel"
+                aria-labelledby="viewAssessment-tab" tabindex="0">
+                <app-view-assessment></app-view-assessment>
+            </div>
+            <div class="tab-pane fade" id="addAssessment-tab-pane" role="tabpanel"
+                aria-labelledby="addAssessment-tab" tabindex="0">
+                <app-add-assessment></app-add-assessment>
+            </div>
+            <div class="tab-pane fade" id="updateAssessment-tab-pane" role="tabpanel"
+                aria-labelledby="updateAssessment-tab" tabindex="0">
+                Comming Soon...
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-assessmentscore" role="tabpanel" aria-labelledby="nav-assessmentscore-tab"
+        tabindex="0">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="viewAssessmentScore-tab" data-bs-toggle="tab"
+                    data-bs-target="#viewAssessmentScore-tab-pane" type="button" role="tab"
+                    aria-controls="viewAssessmentScore-tab-pane" aria-selected="true">View Assessment Score</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addAssessmentScore-tab" data-bs-toggle="tab"
+                    data-bs-target="#addAssessmentScore-tab-pane" type="button" role="tab"
+                    aria-controls="addAssessmentScore-tab-pane" aria-selected="false">Add Assessment Score</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="updateAssessmentScore-tab" data-bs-toggle="tab"
+                    data-bs-target="#updateAssessmentScore-tab-pane" type="button" role="tab"
+                    aria-controls="updateAssessmentScore-tab-pane" aria-selected="false">Update Assessment
+                    Score</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="viewAssessmentScore-tab-pane" role="tabpanel"
+                aria-labelledby="viewAssessmentScore-tab" tabindex="0">
+
+                <app-view-assessment-score></app-view-assessment-score>
+            </div>
+            <div class="tab-pane fade" id="addAssessmentScore-tab-pane" role="tabpanel"
+                aria-labelledby="addAssessmentScore-tab" tabindex="0">
+                <app-add-assessment-score></app-add-assessment-score>
+            </div>
+            <div class="tab-pane fade" id="updateAssessmentScore-tab-pane" role="tabpanel"
+                aria-labelledby="updateAssessmentScore-tab" tabindex="0">
+                Comming Soon...
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="nav-report" role="tabpanel" aria-labelledby="nav-report-tab" tabindex="0">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="viewReport-tab" data-bs-toggle="tab"
+                    data-bs-target="#viewReport-tab-pane" type="button" role="tab"
+                    aria-controls="viewReport-tab-pane" aria-selected="true">View Report</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addReport-tab" data-bs-toggle="tab"
+                    data-bs-target="#addReport-tab-pane" type="button" role="tab"
+                    aria-controls="addReport-tab-pane" aria-selected="false">Add Report</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="viewReport-tab-pane" role="tabpanel"
+                aria-labelledby="viewReport-tab" tabindex="0">
+                Comming Soon....
+            </div>
+            <div class="tab-pane fade" id="addReport-tab-pane" role="tabpanel"
+                aria-labelledby="addReport-tab" tabindex="0">
+                Comming Soon....
+            </div>
+        </div>
+    </div>
+
+</div>

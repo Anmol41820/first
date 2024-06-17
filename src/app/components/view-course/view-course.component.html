@@ -1,0 +1,21 @@
+<table class="table caption-top">
+    <caption>List of Courses</caption>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Course Description</th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of arrCourse">
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.cName}}</td>
+            <td>{{a.cDescription}}</td>
+            <td>{{a.categoryId}}</td>
+            <td><button type="button" (click)="deleteCourse(a.id)" class="btn btn-secondary">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

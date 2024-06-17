@@ -1,0 +1,21 @@
+<table class="table caption-top">
+    <caption>List of AssessmentScore</caption>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Assessment Id</th>
+            <th scope="col">Trainee Id</th>
+            <th scope="col">Score</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of arrAssessmentScore">
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.assessmentId}}</td>
+            <td>{{a.traineeId}}</td>
+            <td>{{a.score}}</td>
+            <td><button type="button" class="btn btn-secondary">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

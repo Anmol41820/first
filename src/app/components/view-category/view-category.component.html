@@ -1,0 +1,17 @@
+<table class="table caption-top">
+    <caption>List of Courses</caption>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course Category Description</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of arrCategory">
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.catDescription}}</td>
+            <td><button type="button" class="btn btn-secondary">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

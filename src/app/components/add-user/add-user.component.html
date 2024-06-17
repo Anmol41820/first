@@ -1,0 +1,80 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+    <h2>Add User</h2>
+    <div class="mb-4">
+        <label for="firstNameInput" class="form-label">First Name</label>
+        <input type="text" id="firstNameInput" class="form-control" name="firstName" formControlName="firstName">
+        <div *ngIf="submitted && f['firstName'].errors" class="">
+            <div *ngIf="f['firstName'].errors['required']" style="color:red"> First Name is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="lastNameInput" class="form-label">Last Name</label>
+        <input type="text" id="lastNameInput" class="form-control" name="lastName" formControlName="lastName">
+        <div *ngIf="submitted && f['lastName'].errors" class="">
+            <div *ngIf="f['lastName'].errors['required']" style="color:red"> Last Name is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="emailInput" class="form-label">Email</label>
+        <input type="email" id="emailInput" class="form-control" name="email" formControlName="email">
+        <div *ngIf="submitted && f['email'].errors" class="">
+            <div *ngIf="f['email'].errors['required']" style="color:red"> Email is required</div>
+            <div *ngIf="f['email'].errors['email']" style="color:red"> Email is invalid</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="roleInput" class="form-label">Role</label>
+        <select class="form-control" id="roleInput" name="role" formControlName="role">
+            <option value="">Select Role</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Trainee">Trainee</option>
+          </select>
+        <div *ngIf="submitted && f['role'].errors" class="">
+            <div *ngIf="f['role'].errors['required']" style="color:red"> Role is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="phoneNoInput" class="form-label">Phone NO.</label>
+        <input type="number" id="phoneNoInput" class="form-control" name="phoneNo" formControlName="phoneNo">
+        <div *ngIf="submitted && f['phoneNo'].errors" class="">
+            <div *ngIf="f['phoneNo'].errors['required']" style="color:red"> Phone NO.is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="dobInput" class="form-label">DOB</label>
+        <input type="date" id="dobInput" class="form-control" name="dob" formControlName="dob">
+        <div *ngIf="submitted && f['dob'].errors" class="">
+            <div *ngIf="f['dob'].errors['required']" style="color:red"> DOB is required</div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <label for="houseNoInput" class="form-label">House No.</label>
+        <input type="number" id="houseNoInput" class="form-control" name="houseNo" formControlName="houseNo">
+        <div *ngIf="submitted && f['houseNo'].errors" class="">
+            <div *ngIf="f['houseNo'].errors['required']" style="color:red"> House No. is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="streetInput" class="form-label">Street</label>
+        <input type="text" id="streetInput" class="form-control" name="street" formControlName="street">
+        <div *ngIf="submitted && f['street'].errors" class="">
+            <div *ngIf="f['street'].errors['required']" style="color:red"> Street is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="cityInput" class="form-label">City</label>
+        <input type="text" id="cityInput" class="form-control" name="city" formControlName="city">
+        <div *ngIf="submitted && f['city'].errors" class="">
+            <div *ngIf="f['city'].errors['required']" style="color:red"> City is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="pinCodeInput" class="form-label">Pin Code</label>
+        <input type="number" id="pinCodeInput" class="form-control" name="pinCode" formControlName="pinCode">
+        <div *ngIf="submitted && f['pinCode'].errors" class="">
+            <div *ngIf="f['pinCode'].errors['required']" style="color:red"> Pin Code is required</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>

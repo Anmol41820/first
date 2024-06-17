@@ -1,0 +1,32 @@
+/* *{
+    background-color: #CADCFC;
+    margin: 0;
+    padding: 0;
+}  */
+/* .card-center{
+    display:flex; 
+    justify-content: center;
+}
+li{
+    padding: 4px;
+} */
+.main-container{
+    display:flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+.headerr{
+
+    background-color: #8AB6F9;
+}
+.contentt{ 
+    background-color:#CADCFC ;
+    flex:1
+}
+.footerr{
+    background-color: #00246B;
+}
+/* .footer-icon{
+    height:2.5rem;
+    width:2.5rem;
+} */

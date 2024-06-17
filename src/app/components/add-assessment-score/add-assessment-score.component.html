@@ -1,0 +1,27 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+    <h2>Add AssessmentScore</h2>
+    <div class="mb-4">
+        <label for="assessmentIdInput" class="form-label">Assessment Id</label>
+        <input type="number" id="assessmentIdInput" class="form-control" name="assessmentId"
+            formControlName="assessmentId">
+        <div *ngIf="submitted && f['assessmentId'].errors" class="">
+            <div *ngIf="f['assessmentId'].errors['required']" style="color:red">Assessment Id is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="traineeIdInput" class="form-label">Trainee Id</label>
+        <input type="number" id="traineeIdInput" class="form-control" name="traineeId" formControlName="traineeId">
+        <div *ngIf="submitted && f['traineeId'].errors" class="">
+            <div *ngIf="f['traineeId'].errors['required']" style="color:red">Trainee Id is required</div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="scoreInput" class="form-label">Score</label>
+        <input type="number" id="scoreInput" class="form-control" name="score" formControlName="score">
+        <div *ngIf="submitted && f['score'].errors" class="">
+            <div *ngIf="f['score'].errors['required']" style="color:red">Score is required</div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Assessment Score</button>
+</form>

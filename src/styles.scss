@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+
+// *{
+//     background-color: #CADCFC;
+//     margin: 0;
+//     padding: 0;
+// }
+// .card-center{
+//     display:flex; 
+//     justify-content: center;
+// }
+li{
+    padding: 4px;
+}
+.main-container{
+    display:flex; 
+    flex-direction: column;
+    min-height: 100vh;
+}
+.headerr{
+    background-color: #8AB6F9;
+}
+.contentt{ 
+    background-color:#CADCFC ;
+    flex:1;
+    // justify-items: center;
+}
+.home-item{
+    display: flex;
+    justify-content: center;
+    // gap: 10px;
+    // margin : auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    // margin: auto;
+}
+.assessment-item{
+    display: flex;
+    justify-content: center;
+    // gap: 10px;
+    margin: auto;
+    // padding: 10px;
+    // margin: auto;
+}
+.footerr{
+    background-color: #00246B;
+}
+.footer-icon{
+    margin: 5px;
+    height:2.5rem;
+    width:2.5rem;
+}
+
+
+
+
+
+
+
+
+// .bordered{
+//     border: 1px solid black;
+//     background-color: aqua;
+// }

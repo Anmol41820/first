@@ -1,0 +1,217 @@
+<nav class="navbar  m-0 p-0 navbar-expand-lg">
+    <!-- navbar -->
+    <canvas id="logo" width="300" height="35">
+        <h2>Assessment</h2>
+    </canvas>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['aboutus']">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['admin']">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['assessments']">Assessments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['contactus']">Contact Us</a>
+            </li>
+
+            <!-- register -->
+            <li>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Register
+                </button>
+
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="registerForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="inputFirstName" class="form-label">First
+                                            Name</label>
+                                        <input type="text" class="form-control" id="inputFirstName4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputLastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="inputLastName4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputDOB" class="form-label">Date Of Birth</label>
+                                        <input type="date" class="form-control" id="inputDOB">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Conform
+                                            Password</label>
+                                        <input type="password" class="form-control" id="inputConfirmPassword4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="inputAddress"
+                                            placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">State</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="inputZip" class="form-label">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Check me out
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="submit" class="btn btn-primary">Save</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- login -->
+            <li>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Login
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email
+                                            address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your
+                                            email with anyone else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me
+                                            out</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary position-relative">Login
+                                        <span id="loginCount"
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" id="registerButton">Register</button>
+                                <!-- <button type="button" class="btn btn-primary">Login</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- cart -->
+            <li>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    Add Cart
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Cart</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form [formGroup]="photoForm">
+                                    <div class="form-group">
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo"
+                                            (change)="onFileChange($event)">
+                                    </div>
+                                    <div *ngIf="photoURL" class="photo-preview">
+                                        <img [src]="photoURL" alt="Photo Preview" class="img-thumbnail"
+                                            style="width: 200px; height: auto;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cartName" class="form-label">Name
+                                        </label>
+                                        <input type="text" class="form-control" id="cartName"
+                                            aria-describedby="cartNameHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="cartEmail" class="form-label">Email
+                                        </label>
+                                        <input type="email" class="form-control" id="cartEmail"
+                                            aria-describedby="cartEmailHelp">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                                <button type="button" class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</nav>
