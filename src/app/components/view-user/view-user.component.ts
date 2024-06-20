@@ -9,6 +9,10 @@ import { User } from '../../models/user';
 export class ViewUserComponent {
   arrUser: User[] = [];
   constructor(private userService: UserService){
-    this.arrUser = this.userService.getUsers();
+    // this.arrUser = this.userService.getUsers();
+    this.userService.getUsers().subscribe(data=>{
+      this.arrUser=data;
+      console.log(this.arrUser)
+    })
   }
 }

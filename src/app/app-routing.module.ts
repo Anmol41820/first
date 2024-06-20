@@ -5,12 +5,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AssessmentsComponent } from './components/assessments/assessments.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AdminGuard } from './guards/adminGuard';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent},
   { path: "aboutus", component:AboutUsComponent },
-  { path: "admin", component:AdminComponent},
+  { path: "admin", component:AdminComponent,canActivate:[AdminGuard()]},
   { path: "assessments", component:AssessmentsComponent},
   { path: "contactus", component:ContactUsComponent}
 ];

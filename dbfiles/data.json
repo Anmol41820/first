@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Anmol",
+      "lastName": "Gupta",
+      "role": "Admin",
+      "email": "agupta20@iitk.ac.in",
+      "phoneNo": "8982511209",
+      "dob": "18/12/2000",
+      "address": {
+        "houseNo": "1",
+        "street": "8th Cross Road",
+        "city": "Bangalore",
+        "pinCode": "471515"
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "id": "1",
+      "assessmentNo": "1",
+      "assessmentDate": "18/12/2023",
+      "assessmentTime": "12:00",
+      "question": [
+        {
+          "id": "1",
+          "qText": "How are you?",
+          "option": [
+            "True",
+            "False"
+          ],
+          "answer": "True",
+          "qType": "True/False"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "assessmentNo": "22",
+      "assessmentDate": "12/12/2023",
+      "assessmentTime": "12:00",
+      "question": [
+        {
+          "id": 1,
+          "qText": "How are you?",
+          "option": [
+            "Good",
+            "Bad",
+            "Sad",
+            "Angry"
+          ],
+          "answer": "Angry",
+          "qType": [
+            "Multi-Correct"
+          ]
+        }
+      ],
+      "facultyId": "56"
+    },
+    {
+      "id": "3",
+      "assessmentNo": "22",
+      "assessmentDate": "12/12/2023",
+      "assessmentTime": "12:00",
+      "question": [
+        {
+          "id": 1,
+          "qText": "Are you Good?",
+          "option": [],
+          "answer": "True",
+          "qType": [
+            "True/False"
+          ]
+        },
+        {
+          "id": 1,
+          "qText": "",
+          "option": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "answer": "",
+          "qType": ""
+        }
+      ],
+      "facultyId": "56"
+    },
+    {
+      "id": "3",
+      "assessmentNo": "22",
+      "assessmentDate": "12/12/2023",
+      "assessmentTime": "12:00",
+      "question": [
+        {
+          "id": 1,
+          "qText": "Are you Good?",
+          "option": [],
+          "answer": "True",
+          "qType": [
+            "True/False"
+          ]
+        },
+        {
+          "id": 1,
+          "qText": "",
+          "option": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "answer": "",
+          "qType": ""
+        },
+        {
+          "id": 1,
+          "qText": "Are you Good?",
+          "option": [],
+          "answer": "True",
+          "qType": [
+            "True/False"
+          ]
+        },
+        {
+          "id": 1,
+          "qText": "Which car do you love?",
+          "option": [
+            "BMW",
+            "Bad",
+            "Sad",
+            "Angry"
+          ],
+          "answer": "BMW",
+          "qType": [
+            "Multi-Correct"
+          ]
+        }
+      ],
+      "facultyId": "56"
+    }
+  ]
+}

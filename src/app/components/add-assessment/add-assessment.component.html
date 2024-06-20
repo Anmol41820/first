@@ -1,4 +1,4 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
     <h2>Add Assessment</h2>
     <div class="mb-4">
         <label for="assessmentNoInput" class="form-label">Assessment No.</label>
@@ -33,8 +33,6 @@
     </div>
 
 
-
-
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -50,7 +48,6 @@
                 <div class="">
                     <label for="questionType">Question Type:</label>
                     <select class="form-control" id="questionType" formControlName="questionType">
-                        <!-- <option value="">Select question type</option> -->
                         <option value="single">Single Correct</option>
                         <option value="multiple">Multiple Correct</option>
                     </select>
@@ -58,9 +55,6 @@
                         <div *ngIf="f['questionType'].errors['required']" style="color:red">Question Type is required</div>
                     </div>
                 </div>
-                <!-- <div class="options-container" *ngIf="myForm.get('questionType').value === NULL">
-                    please choose the Type of question.
-                </div> -->
                 <div class="options-container" *ngIf="myForm.get('questionType')?.value === 'single'">
                     <div class="form-group form-check" *ngFor="let option of options.controls; let i = index">
                         <input type="radio" class="form-check-input" name="singleOption">
@@ -79,12 +73,132 @@
         </div>
     </div>
 
-
-
-
-
     <br>
     <br>
 
     <button type="submit" class="btn btn-primary">Add Assessment</button>
-</form>
+</form> -->
+
+
+
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup" (ngSubmit)="saveFirstStepData(firstFormGroup)">
+            <ng-template matStepLabel>Add Assessment Details</ng-template>
+            <mat-form-field class="col">
+                <mat-label>Assessment No.</mat-label>
+                <input matInput placeholder="Assessment No." formControlName="assessmentNo" required>
+            </mat-form-field>
+            <mat-form-field class="col">
+                <mat-label>Assessment Date</mat-label>
+                <input matInput placeholder="Assessment Date" formControlName="assessmentDate" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Assessment Time</mat-label>
+                <input matInput placeholder="Assessment Time" formControlName="assessmentTime" required>
+            </mat-form-field>
+            <mat-form-field class="col">
+                <mat-label>Faculty Id</mat-label>
+                <input matInput placeholder="Faculty Id" formControlName="facultyId" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Add Questions">
+
+        <form class="basic-container" [formGroup]="itineryForm" (ngSubmit)="saveSecondStepData(itineryForm.value)">
+            <!-- <mat-toolbar color="primary">
+                Add/Remove multiple day itinery
+            </mat-toolbar> -->
+            <div formArrayName="itineries">
+                <div class="row" *ngFor="let product of itineriesArr().controls; let i = index" [formGroupName]="i">
+
+
+                    <mat-form-field class="col">
+                        <mat-label>Question</mat-label>
+                        <input matInput formControlName="question" placeholder="Question">
+                    </mat-form-field>
+
+
+                    <br>
+
+                    <mat-form-field class="col">
+                        <mat-label>Question Type</mat-label>
+                        <mat-select [(value)]="selectedQuestionType[i]" (selectionChange)="checkType(i,selectedQuestionType[i])" formControlName="questionType" multiple>
+                            <mat-option *ngFor="let type of QuestionType"
+                                [value]="type">{{type}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <!-- <div *ngIf="arrCheck[i]===1">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">True</mat-radio-button>
+                            <mat-radio-button value="2">False</mat-radio-button>
+                          </mat-radio-group>
+                    </div> -->
+                    <div *ngIf="arrCheck[i]===2">
+                        <mat-form-field class="col">
+                            <mat-label>Option 1</mat-label>
+                            <input matInput formControlName="option1" placeholder="Option 1">
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                            <mat-label>Option 2</mat-label>
+                            <input matInput formControlName="option2" placeholder="Option 2">
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                            <mat-label>Option 3</mat-label>
+                            <input matInput formControlName="option3" placeholder="Option 3">
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                            <mat-label>Option 4</mat-label>
+                            <input matInput formControlName="option4" placeholder="Option 4">
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field class="col">
+                        <mat-label>Answer</mat-label>
+                        <input matInput formControlName="answer" placeholder="Answer">
+                    </mat-form-field>
+                    
+
+                    <div class="col-3">
+                        <button class="float-left" mat-icon-button color="primary" aria-label="Remove/clear"
+                            (click)="removeOrClearItinery(i)" matTooltip="Remove">
+                            <mat-icon>highlight_off</mat-icon>
+                        </button>
+                        <button class="float-left" mat-icon-button color="primary" aria-label="Add"
+                            (click)="addItineryFormGroup()" matTooltip="Add">
+                            <mat-icon>add_circle_outline</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button mat-button matStepperNext type="submit">Save</button>
+            </div>
+        </form>
+
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+
+
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-stepper>

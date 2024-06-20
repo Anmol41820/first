@@ -22,6 +22,20 @@ import { AddAssessmentScoreComponent } from './components/add-assessment-score/a
 import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
 import { AddAssessmentComponent } from './components/add-assessment/add-assessment.component';
 import { ViewAssessmentComponent } from './components/view-assessment/view-assessment.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,15 +58,28 @@ import { ViewAssessmentComponent } from './components/view-assessment/view-asses
     ViewAssessmentScoreComponent,
     AddAssessmentComponent,
     ViewAssessmentComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatIconModule,
+    MatRadioModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

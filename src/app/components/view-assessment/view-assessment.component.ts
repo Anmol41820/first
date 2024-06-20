@@ -10,6 +10,10 @@ import { AssessmentService } from '../../services/assessment.service';
 export class ViewAssessmentComponent {
   arrAssessment: Assessment[] = [];
   constructor(private assessmentService: AssessmentService){
-    this.arrAssessment = this.assessmentService.getAssessments();
+    // this.arrAssessment = this.assessmentService.getAssessments();
+    this.assessmentService.getAssessments().subscribe(data=>{
+      this.arrAssessment=data;
+      console.log(this.arrAssessment)
+    })
   }
 }

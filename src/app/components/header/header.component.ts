@@ -1,5 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +11,26 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class HeaderComponent implements AfterViewInit {
   photoForm: FormGroup;
   photoURL: string | ArrayBuffer | null = null;
+  loginEmail: string = "";
+  loginPassword: string = "";
+  loginCheckMe: string = "";
+  validEmail: boolean = false;
 
-  constructor(private fb: FormBuilder) { 
+  arrUser: User[] = [] ;
+
+  constructor(private fb: FormBuilder,private userService: UserService) { 
+    this.loginEmail = "";
+    this.loginPassword = "";
+    this.loginCheckMe = "";
+    this.validEmail = false;
+
+    // this.arrUser = this.userService.getUsers();
+    this.userService.getUsers().subscribe(data=>{
+      this.arrUser=data;
+      console.log(this.arrUser)
+    })
+
+
     this.photoForm = this.fb.group({
       photo: [null]
     });
@@ -71,5 +91,21 @@ export class HeaderComponent implements AfterViewInit {
       };
       reader.readAsDataURL(input.files[0]);
     }
+  }
+
+
+  
+  onSubmitLogin(value: string): void {
+    console.log('you submitted value: ',value);
+
+    for(var i=0;i<this.arrUser.length;i++){
+      if(this.arrUser[i].email == this.loginEmail){
+        localStorage.setItem('role', this.arrUser[i].role);
+        this.validEmail=false;
+        location.reload();
+        return ;
+      }
+    }
+    this.validEmail=true;
   }
 }
